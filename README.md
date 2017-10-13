@@ -15,14 +15,18 @@ namespace aspnet_seguro.Controllers
 {
     [Authorize(Roles="admin")]
     [Route("api/[controller]")]
-    /*
-    Este é um controlador com acesso seguro. Apenas usuarios com o papel de administador podem acessar este recurso.
+   
+   /*
+    Este é um controlador com acesso seguro. 
+    Apenas usuarios com o papel de administador podem acessar este recurso.
 
     Neste exemplo ja criamos um banco de dados com o usuario chamado usuario1@empresa.com.br, vinculado ao papel admin.
-    Tambem temos o usuario chamado usuario2@empresa.com.br, que nao tem esta vinculacao.
-    
-    As senhas destes usuarios para teste são respectivamentee Usuario1! e Usuario2!
+    Tambem temos o usuario chamado usuario2@empresa.com.br, que nao tem esta vinculacao e portanto 
+    não pode acessar este recurso seguro.
+  
+    As senhas destes usuarios para teste são respectivamente: Usuario1! e Usuario2!
      */
+     
     public class SeguroController : Controller
     {
 
