@@ -2,8 +2,9 @@
 Exemplo simples de uso de autenticação e autorização em ASP.NET Core 2
 
 O projeto foi gerado através do seguinte scaffolding de linha de comando:
+```sh
 dotnet new mvc --auth Individual
-
+```
 O código gerado cria um conjunto de tabelas em um banco de dados SQLite para uso pelo Identity.
 Este banco de dados está contido fisicamente no arquivo App.db.
 
@@ -42,6 +43,12 @@ namespace aspnet_seguro.Controllers
 
 Para criar novos papéis basta inserir dados na tabela AspNetRoles.
 Para fazer a vinculacao de um usuario a um papel basta inserir o dado na tabela AspNetUserRoles.
+
+Para testar o seu código, rode a aplicação (dotnet run) e então aponte o seu navegador 
+para o endereço http://localhost:5000/api/Seguro. 
+
+Se você no estiver logado como usuario1, o acesso irá funcionar. 
+Caso contrário irá receber uma mensagem de erro.
 
 E para documentação mais específica para usar este recurso, veja o site da Microsoft aqui:
 https://docs.microsoft.com/en-us/aspnet/core/security/authorization/roles
